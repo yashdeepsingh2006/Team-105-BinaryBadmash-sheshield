@@ -3,7 +3,7 @@ import contractABI from "../abi/sheshield.json"
 
 const contractAddress = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS;
 
-const connectWallet = async () => {
+export const connectWallet = async () => {
     if (window.ethereum) {
         try {
             const accounts = await window.ethereum.request({
@@ -75,6 +75,24 @@ export const ownerOfNft = async (tokenId) => {
     }
 };
 
+export const getName = async (tokenId) => {
+    try {
+        const contract = await getContract();
+        return await contract.getName(tokenId);
+    } catch (error) {
+        console.error("Error getting NFT name:", error);
+    }
+}
+
+export const getCid = async (tokenId) => {
+    try {
+        const contract = await getContract();
+        return await contract.getCid(tokenId);
+    } catch (error) {
+        console.error("Error getting NFT CID:", error);
+    }
+}
+
 // USER FUNCTIONS 
 
 export const mint = async (tokenId) => {
@@ -94,5 +112,7 @@ export default {
     allNFT,
     ownerOfNft,
     mint,
-    getWalletAddress
+    getWalletAddress,
+    getName,
+    getCid
 };
