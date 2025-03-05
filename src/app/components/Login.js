@@ -13,58 +13,59 @@ export default function Login() {
               src={"/login/bg.png"}
               width={400} // Set appropriate width
               height={400} // Set appropriate height
-              alt="Login Image"
-            />
-          </div>
-          <div className="w-full max-w-md">
+                alt="Login Image"
+              />
+              </div>
+
+              <div className="w-full max-w-md"></div>
+
+
+
+
+
+
+
+
+
+          <div className="w-full max-w-md mr-20">
             <h2 className="text-2xl font-bold mb-6 text-center text-black">LOGIN</h2>
             <form>
-              <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-                  Email
-                </label>
-                <input
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="email"
-                  type="email"
-                  placeholder="Enter your email"
-                />
-              </div>
-              <div className="mb-1">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
-                  Password
-                </label>
-                <input
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                  id="password"
-                  type="password"
-                  placeholder="Enter your password"
-                />
-              </div>
               <div className="mb-6">
                 <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
                   University
                 </label>
-                <input
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                  id="password"
-                  type="password"
-                  placeholder="Enter your University"
-                />
+                <select
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="university"
+                  name="university"
+                >
+                  <option value="1">University 1</option>
+                  <option value="2">University 2</option>
+                  <option value="3">University 3</option>
+                </select>
               </div>
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-center">
                 <button
                   className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                   type="button"
                 >
                   Sign In
                 </button>
-                <a className="inline-block align-baseline font-bold text-sm text-blue-600 hover:text-blue-800" href="#">
-                  Forgot Password?
-                </a>
+                
               </div>
             </form>
           </div>
+
+
+
+
+
+
+
+
+
+
+
 
         </div>
       </main>
