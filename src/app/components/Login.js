@@ -1,7 +1,101 @@
-import React from 'react'
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Login() {
   return (
-    <div>Login</div>
-  )
+    <div className="flex flex-col min-h-screen">
+      {/* Main Content */}
+      <main className="flex-grow flex items-center justify-center bg-gray-100 ">
+
+        <div className="flex bg-white p-8 rounded-lg shadow-md w-full max-w-4xl gap-8 ">
+          <div className="w-full max-w-md flex items-center justify-center  ">
+            <Image className='rounded-lg'
+              src={"/login/bg.png"}
+              width={400} // Set appropriate width
+              height={400} // Set appropriate height
+              alt="Login Image"
+            />
+          </div>
+          <div className="w-full max-w-md">
+            <h2 className="text-2xl font-bold mb-6 text-center text-black">LOGIN</h2>
+            <form>
+              <div className="mb-4">
+                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+                  Email
+                </label>
+                <input
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="email"
+                  type="email"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <div className="mb-1">
+                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
+                  Password
+                </label>
+                <input
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                  id="password"
+                  type="password"
+                  placeholder="Enter your password"
+                />
+              </div>
+              <div className="mb-6">
+                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
+                  University
+                </label>
+                <input
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                  id="password"
+                  type="password"
+                  placeholder="Enter your University"
+                />
+              </div>
+              <div className="flex items-center justify-between">
+                <button
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  type="button"
+                >
+                  Sign In
+                </button>
+                <a className="inline-block align-baseline font-bold text-sm text-blue-600 hover:text-blue-800" href="#">
+                  Forgot Password?
+                </a>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="foot flexbox bg-blue-500" style={{ justifyContent: 'space-between', flexWrap: 'wrap', marginTop: '60px' }}>
+        <div className="waves">
+          <div className="wave" id="wave1"></div>
+          <div className="wave" id="wave2"></div>
+          <div className="wave" id="wave3"></div>
+          <div className="wave" id="wave4"></div>
+        </div>
+        <div className="menu">
+          <div className="logo">
+            <Image
+              src="/wave.jpg" // Route of the image file in the public directory
+              width={200} // Set appropriate width
+              height={20} // Set appropriate height
+              alt="image"
+            />
+          </div>
+          <div className="logo">
+            <Image
+              src="/wave2.jpg" // Route of the image file in the public directory
+              width={200} // Set appropriate width
+              height={20} // Set appropriate height
+              alt="image"
+            />
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
 }

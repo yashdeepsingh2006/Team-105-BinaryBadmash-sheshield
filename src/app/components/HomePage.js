@@ -18,9 +18,9 @@ export default function Landingpage() {
 
 
             {/* BUTTONS */}
-            <div className='flex flex-col md:flex-row self-center mt-[4.7rem]'>
-
-                <Link href="/direct/home"><button className="btn btn1 my-4 md:mx-6">Get started</button></Link>
+            <div className='flex bg-[#fdfbef] flex-col md:flex-row self-center mt-8'>
+                
+                <Link href="/routes/login"><button className="btn btn1 my-4 md:mx-6">Get started</button></Link>
 
             </div>
             <div>
