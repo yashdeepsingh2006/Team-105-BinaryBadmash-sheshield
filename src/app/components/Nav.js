@@ -6,7 +6,7 @@ import Image from 'next/image'
 export default function Nav() {
     return (
         <div>
-            <nav className='flex flex-row justify-between px-5 py-2 bg-[#01292B] w-full'>
+            <nav className='flex h-[4rem] flex-row justify-between px-5 py-0.5 bg-[#01292B] w-full'>
 
                 {/* div containing logo */}
                 <div className='w-1/2'>
@@ -14,7 +14,7 @@ export default function Nav() {
                         height={80}
                         width={110}
                         src={'/images/logo.png'}
-                        alt='Logo-mintify'
+                        alt='Logo'
                     />
                 </div>
 
