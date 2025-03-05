@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SheShield – Digital Evidence Locker & Harassment Reporting System  
+*Empowering Women with Secure & Verifiable Digital Evidence*  
 
-## Getting Started
+## 🚀 Overview  
+SheShield is a *privacy-focused digital locker* that allows women to securely store evidence of harassment (texts, images, audio, video) in an *encrypted and tamper-proof format. It enables **easy reporting* to legal authorities and NGOs while integrating *blockchain-based verification* for enhanced security.  
 
-First, run the development server:
+## 🎯 Problem Statement  
+Women facing harassment often hesitate to report incidents due to:  
+- *Fear of tampered or lost evidence*  
+- *Social stigma & privacy concerns*  
+- *Complex legal reporting processes*  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+There is *no simple, secure, and verifiable* way to collect and store evidence, preventing victims from seeking justice.  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔥 Key Features  
+### ✅ *Secure Digital Evidence Locker*  
+- Upload *screenshots, videos, audio recordings, or documents*  
+- *End-to-end encryption* ensures privacy  
+- *Timestamped storage* to prevent manipulation  
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 🔗 *Blockchain-Based Integrity Proof* 
+- Uses *Ethereum smart contracts + IPFS* to store file hashes  
+- Ensures *tamper-proof and legally verifiable* evidence  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 📝 *One-Click Report Generation & Submission*  
+- Auto-formats reports with *incident details & attached evidence*  
+- Can be *submitted to legal authorities or NGOs* via email/API  
 
-## Learn More
+### 🔒 *Anonymous Reporting & Emergency Contact Alerts*  
+- Allows victims to *report incidents anonymously*  
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🛡️ *Privacy & Security First*  
+- *Zero-knowledge encryption* ensures only the user can access their files  
+- *Decentralized storage (IPFS)* for enhanced security  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🏗️ Tech Stack  
+| Component  | Technology Used |
+|------------|----------------|
+| Frontend   | Next.js, TailwindCSS |
+| Backend    | Node.js |
+| Blockchain | Solidity, IPFS, Ethereum |
+| APIs       | Email API (for report submission), Law Enforcement API (future integration) |
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
