@@ -42,10 +42,13 @@ export default function Nav() {
                         {/* Dropdown menu */}
                         {isMenuOpen && (
                             <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-20">
-                                <Link href="/login" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                                <Link href="/routes/login" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
                                     Login
                                 </Link>
-                                <Link href="/dashboard" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                                <Link href="/routes/dashboard" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                                    Dashboard
+                                </Link>
+                                <Link href="/routes/mint" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
                                     Dashboard
                                 </Link>
                             </div>
