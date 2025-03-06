@@ -1,7 +1,43 @@
+"use client"
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { useState, useEffect } from 'react';
 
 export default function Login() {
+
+  const router = useRouter();
+
+  // State to track wallet connection
+  const [account, setAccount] = useState('');
+  const [connected, setConnected] = useState(false);
+
+  // Function to connect to wallet
+  const connectWallet = async () => {
+    if (typeof window.ethereum !== 'undefined') {
+      try {
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        setAccount(accounts[0]);
+        setConnected(true);
+        console.log('Connected to wallet:', accounts[0]);
+      } catch (error) {
+        console.error('Error connecting to wallet:', error);
+      }
+    } else {
+      console.log('No wallet detected. Please install MetaMask or another wallet provider.');
+    }
+  };
+
+  // Connect wallet when component mounts
+  useEffect(() => {
+    connectWallet();
+  }, []);
+
+  const proceed = async () => {
+    router.push('/routes/dashboard')
+  }
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Main Content */}
@@ -39,13 +75,17 @@ export default function Login() {
                   id="university"
                   name="university"
                 >
-                  <option value="1">University 1</option>
-                  <option value="2">University 2</option>
-                  <option value="3">University 3</option>
+                  <option value="1">Chitkara university</option>
+                  <option value="2">Thapar University</option>
+                  <option value="3">Punjab University</option>
+                  <option value="4">Punjabi University</option>
+                  <option value="5">Chandigarh University</option>
                 </select>
               </div>
               <div className="flex items-center justify-center">
+
                 <button
+                onClick={proceed}
                   className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                   type="button"
                 >

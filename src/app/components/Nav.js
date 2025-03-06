@@ -1,17 +1,19 @@
 "use client"
 
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Nav() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    
     return (
         <div>
-            <nav className='flex h-[4rem] flex-row justify-between px-5 py-0.5 bg-[#01292B] w-full'>
-
-                {/* div containing logo */}
+            <nav className='flex flex-row justify-between bg-black  h-16 p-1 sticky top-0 z-10'>
+                {/* Logo div */}
                 <div className='-mt-2.5'>
                     <Image
-                        
                         height={80}
                         width={110}
                         src={'/nav/logo.png'}
@@ -20,11 +22,13 @@ export default function Nav() {
                 </div>
 
                 {/* div containing other nav items */}
-                <div className='flex flex-row justify-between md:pr-10'>
-
+                <div className='flex flex-row justify-between md:pr-10 relative'>
                     {/* hamburger */}
                     <div className='hover:cursor-pointer'>
-                        <button className='mt-3.5 focus:outline-none focus:ring-2 focus:ring-gray-200 rounded-md'>
+                        <button 
+                            className='mt-3.5 focus:outline-none focus:ring-2 focus:ring-gray-200 rounded-md'
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        >
                             <svg className="h-9 w-9" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path
                                     strokeLinecap="round"
@@ -34,6 +38,18 @@ export default function Nav() {
                                 />
                             </svg>
                         </button>
+                        
+                        {/* Dropdown menu */}
+                        {isMenuOpen && (
+                            <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-20">
+                                <Link href="/login" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                                    Login
+                                </Link>
+                                <Link href="/dashboard" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                                    Dashboard
+                                </Link>
+                            </div>
+                        )}
                     </div>
                 </div>
             </nav>
