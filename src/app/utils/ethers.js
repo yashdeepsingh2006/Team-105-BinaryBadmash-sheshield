@@ -95,13 +95,19 @@ export const getCid = async (tokenId) => {
 
 // USER FUNCTIONS 
 
-export const mint = async (tokenId) => {
+export const mint = async (userAddress, imageLink, tokenName, category) => {
     try {
         const contract = await getContract();
-        const tx = await contract.mint(tokenId);
-        await tx.wait(); 
+
+        // Call the `mint` function in your smart contract with the correct arguments
+        const tx = await contract.mint(userAddress, imageLink, tokenName, category);
+
+        // Wait for the transaction to be mined
+        await tx.wait();
+        console.log("NFT minted successfully!");
     } catch (error) {
         console.error("Error minting NFT:", error);
+        throw error; // Re-throw the error to handle it in the UI
     }
 };
 
