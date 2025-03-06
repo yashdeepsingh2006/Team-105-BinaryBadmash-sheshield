@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { generateContent } from '../../ai';
 
-export default function page() {
+export default function Page() {
 
     const [aiResponse, setAiResponse] = useState('');
     const [prompt, setPrompt] = useState('give some preventive measures for preventing harrasment');
