@@ -9,6 +9,7 @@ export default function Page() {
     const [prompt, setPrompt] = useState('give some preventive measures for preventing harrasment');
 
 
+    
     const generateAiResponse = async () => {
         const response = await generateContent(prompt);
         setAiResponse(response);
